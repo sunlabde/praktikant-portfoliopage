@@ -1,0 +1,81 @@
+// urls
+$img-uri: "../images/";
+$svg-uri: "#{$img-uri}svg/";
+
+
+// fonts
+$font-primary: 'PT Sans Narrow', sans-serif;
+$font-secondary: 'Permanent Marker', cursive;
+
+// colors
+$color-primary: #D98471;
+$color-primary-d: #C10016;
+$color-secondary: #FFD900;
+$color-white: #ffffff;
+$color-black: #333333;
+$color-black-l: #555555;
+$color-black-ll: #919393;
+$color-black-lll: #E1E1E6;
+$color-black-llll: #F6F6F9;
+$color-grey: #E6E5E5;
+$color-bg-light: #F2F2F2;
+$color-bg-light-l: #FAFBFC;
+$color-text: $color-black;
+$color-text-l: $color-black-l;
+
+// font-sizes
+$size-root: 16px;
+$size-1: 2.875rem; // 46px
+$size-2: 2.25rem; // 36px
+$size-3: 1.5rem; // 24px
+$size-4: 1.3125rem; // 21px
+$size-5: 1.125rem; // 18px
+$size-6: 1rem; // 16px
+$size-7: 0.875rem; // 14px
+$size-8: 0.75rem; // 12px
+// line height
+$lineHeight-xsmall: 1.1;
+$lineHeight-small: 1.25;
+$lineHeight-medium: 1.5;
+$lineHeight-large: 1.66;
+$lineHeight-xlarge: 2;
+$lineHeight-default: $lineHeight-medium;
+
+// gaps
+$gap-default: 8px;
+$gap-05: $gap-default * 0.5; // 4
+$gap-1: $gap-default; // 8
+$gap-15: $gap-default * 1.5; // 12
+$gap-2: $gap-default * 2; // 16
+$gap-25: $gap-default * 2.5; // 20
+$gap-3: $gap-default * 3; // 24
+$gap-35: $gap-default * 3.5; // 28
+$gap-4: $gap-default * 4; // 32
+$gap-45: $gap-default * 4.5; // 36
+$gap-5: $gap-default * 5; // 40
+$gap-55: $gap-default * 5.5; // 44
+$gap-6: $gap-default * 6; // 48
+$gap-65: $gap-default * 6.5; // 52
+$gap-7: $gap-default * 7; // 56
+$gap-75: $gap-default * 7.5; // 60
+$gap-8: $gap-default * 8; // 64
+$gap-85: $gap-default * 8.5; // 68
+$gap-9: $gap-default * 9; // 72
+$gap-95: $gap-default * 9.5; // 76
+$gap-100: $gap-default * 10; // 80
+$gap-small: $gap-1;
+$gap-medium: $gap-3;
+$gap-large: $gap-55;
+
+// misc
+$borderRadius-default: 4px;
+
+// body setting
+$body-font: $font-primary;
+$body-color: $color-text;
+$body-size: $size-5;
+$body-lineHeight: $lineHeight-default;
+
+// transitions
+$transition-smooth: cubic-bezier(0.215, 0.61, 0.355, 1);
+$transition-default: 375ms $transition-smooth;

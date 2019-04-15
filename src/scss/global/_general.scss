@@ -1,0 +1,97 @@
+body {
+	font-family: $body-font;
+	font-size: $body-size;
+	font-weight: 300;
+	line-height: $body-lineHeight;
+}
+
+.wrapper {
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+.container {
+	max-width: 1144px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $gap-4;
+	padding-right: $gap-4;
+
+	@include tablet-up {
+		padding-left: $gap-6;
+		padding-right: $gap-6;
+	}
+
+	@include desktop-up {
+		padding-left: $gap-8;
+		padding-right: $gap-8;
+	}
+
+	&.is-fullwidth {
+		max-width: none;
+	}
+}
+
+.divider {
+	height: 1px;
+	background-color: $color-black-ll;
+	margin-top: $gap-100;
+	margin-bottom: $gap-100;
+}
+
+.has-gap-bottom {
+	margin-bottom: $gap-6;
+}
+
+.img-fullwidth,
+.img {
+	max-width: 100%;
+}
+
+.highlight-element {
+	animation: highlightElement 1500ms $transition-default;
+}
+
+.to-top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background-color: $color-secondary;
+	margin: 0;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .25);
+	appearance: none;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	position: fixed;
+	right: $gap-25;
+	bottom: $gap-25;
+	z-index: 100;
+
+	@include tablet-up {
+		display: none;
+	}
+
+	img {
+		width: 16px;
+	}
+}
+
+@keyframes highlightElement {
+	0% {
+		background-color: #fff;
+	}
+
+	25% {
+		background-color: transparentize($color-secondary, .5);
+	}
+
+	100% {
+		background-color: #fff;
+	}
+}

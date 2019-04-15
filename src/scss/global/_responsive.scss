@@ -1,0 +1,121 @@
+/**
+ *
+ * @author Thomas Brunner <thomas.brunner@sunlab.de>
+ * @date 03/2018
+ */
+
+ $breakpoint-phablet: 768px;
+ $breakpoint-tablet: 942px;
+ $breakpoint-desktop: 1280px;
+ $breakpoint-widescreen: 1400px;
+ 
+ $phablet-min: ($breakpoint-phablet - 1);
+ $phablet-max: ($breakpoint-tablet - 1);
+ $tablet-min: ($breakpoint-tablet - 1);
+ $tablet-max: ($breakpoint-desktop - 1);
+ $desktop-min: ($breakpoint-desktop - 1);
+ $desktop-max: ($breakpoint-widescreen - 1);
+ $widescreen-min: ($breakpoint-widescreen - 1);
+ 
+ @mixin from($device) {
+     @media screen and (min-width: $device) {
+         @content;
+     }
+ }
+ 
+ @mixin until($device) {
+     @media screen and (max-width: $device - 1px) {
+         @content;
+     }
+ }
+ 
+ @mixin phablet-down {
+     @media screen and (max-width: $phablet-max) {
+         @content;
+     }
+ }
+ 
+ @mixin phablet-up {
+     @media screen and (min-width: $breakpoint-phablet) {
+         @content;
+     }
+ }
+ 
+ @mixin phablet-only {
+     @media screen and (min-width: $breakpoint-phablet) and (max-width: $phablet-max) {
+         @content;
+     }
+ }
+ 
+ @mixin tablet-down {
+     @media screen and (max-width: $tablet-min) {
+         @content;
+     }
+ }
+ 
+ @mixin tablet-up {
+     @media screen and (min-width: $breakpoint-tablet) {
+         @content;
+     }
+ }
+ 
+ @mixin tablet-only {
+     @media screen and (min-width: $breakpoint-tablet) and (max-width: $desktop-min) {
+         @content;
+     }
+ }
+ 
+ @mixin desktop-down {
+     @media screen and (max-width: $desktop-min) {
+         @content;
+     }
+ }
+ 
+ @mixin desktop-up {
+     @media screen and (min-width: $breakpoint-desktop) {
+         @content;
+     }
+ }
+ 
+ @mixin desktop-only {
+     @media screen and (min-width: $breakpoint-desktop) and (max-width: $widescreen-min) {
+         @content;
+     }
+ }
+ 
+ @mixin widescreen-down {
+     @media screen and (max-width: $widescreen-min) {
+         @content;
+     }
+ }
+ 
+ @mixin widescreen-up {
+     @media screen and (min-width: $breakpoint-widescreen) {
+         @content;
+     }
+ }
+ 
+ @mixin ie-only {
+     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+         @content;
+     }
+ }
+ 
+ .is-hidden-desktop {
+     @include desktop-down {
+         display: none!important;
+     }
+ }
+ 
+ .is-hidden-tablet {
+     @include tablet-down {
+         display: none!important;
+     }
+ }
+ 
+ .is-hidden-mobile {
+     @include phablet-down {
+         display: none!important;
+     }
+ }
+ 

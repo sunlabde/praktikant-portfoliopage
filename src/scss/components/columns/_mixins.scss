@@ -1,0 +1,102 @@
+@mixin CreateColumns($suffix) {
+	&.is-narrow-#{$suffix} {
+		flex: none;
+	}
+
+	&.is-full-#{$suffix} {
+		flex: none;
+		width: 100%;
+	}
+
+	&.is-three-quarters-#{$suffix} {
+		flex: none;
+		width: 75%;
+	}
+
+	&.is-two-thirds-#{$suffix} {
+		flex: none;
+		width: 66.6666%;
+	}
+
+	&.is-half-#{$suffix} {
+		flex: none;
+		width: 50%;
+	}
+
+	&.is-one-third-#{$suffix} {
+		flex: none;
+		width: 33.3333%;
+	}
+
+	&.is-one-quarter-#{$suffix} {
+		flex: none;
+		width: 25%;
+	}
+
+	&.is-one-fifth-#{$suffix} {
+		flex: none;
+		width: 20%;
+	}
+
+	&.is-two-fifths-#{$suffix} {
+		flex: none;
+		width: 40%;
+	}
+
+	&.is-three-fifths-#{$suffix} {
+		flex: none;
+		width: 60%;
+	}
+
+	&.is-four-fifths-#{$suffix} {
+		flex: none;
+		width: 80%;
+	}
+
+	&.is-offset-three-quarters-#{$suffix} {
+		margin-left: 75%;
+	}
+
+	&.is-offset-two-thirds-#{$suffix} {
+		margin-left: 66.6666%;
+	}
+
+	&.is-offset-half-#{$suffix} {
+		margin-left: 50%;
+	}
+
+	&.is-offset-one-third-#{$suffix} {
+		margin-left: 33.3333%;
+	}
+
+	&.is-offset-one-quarter-#{$suffix} {
+		margin-left: 25%;
+	}
+
+	&.is-offset-one-fifth-#{$suffix} {
+		margin-left: 20%;
+	}
+
+	&.is-offset-two-fifths-#{$suffix} {
+		margin-left: 40%;
+	}
+
+	&.is-offset-three-fifths-#{$suffix} {
+		margin-left: 60%;
+	}
+
+	&.is-offset-four-fifths-#{$suffix} {
+		margin-left: 80%;
+	}
+
+	@for $i from 1 through 12 {
+		&.is-#{$i}-#{$suffix} {
+			flex: none;
+			width: percentage($i / 12);
+		}
+
+		&.is-offset-#{$i}-#{$suffix} {
+			margin-left: percentage($i / 12);
+		}
+	}
+}
