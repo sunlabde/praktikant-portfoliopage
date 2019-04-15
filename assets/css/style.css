@@ -1,3 +1,43 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    color: #3C5951;
+}
+
+.header {
+    background-color: #F2E6D8;
+}
+
+.headline {
+    font-size: 44px;
+    font-family: 'Playfair Display', serif;
+    color: #3C5951;
+}
+
+.section-references {
+    background-color: #F8F3EE;
+}
+
+.references .item-content {
+    color: #fff;
+    background-color: #D98471;
+}
+
+.footer {
+    background-color: #3C5951;
+}
+
+.is-color-primary {
+    color: #3C5951;
+}
+
+.is-color-secondary {
+    color: #D98471;
+}
+
+.is-bg-secondary {
+    background-color: #D98471;
+}
+
 .is-font-primary {
 	font-family: 'Roboto Slab', serif;
 }
