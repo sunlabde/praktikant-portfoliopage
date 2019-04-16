@@ -38,7 +38,7 @@ body {
 Topbar
 ============================================ */
 
-.tobar .myname {
+.topbar .myname {
 	font-family: 'Playfair Display', serif;
 	font-size: 32px;
 	color: #D98471;
