@@ -1,103 +1,22 @@
+/* ============================================
+Generelles Styling
+============================================ */
+
 body {
-    font-family: 'Roboto Slab', serif;
-    color: #3C5951;
-}
-
-.header {
-    background-color: #F2E6D8;
-}
-
-.headline {
-    font-size: 44px;
-    font-family: 'Playfair Display', serif;
-    color: #3C5951;
-}
-
-.section-references {
-    background-color: #F8F3EE;
-}
-
-.references .item-content {
-    color: #fff;
-    background-color: #D98471;
-}
-
-.references .item-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-}
-
-.footer {
-    color: #ffffff;
-    background-color: #3C5951;
-}
-
-.footer .footer-body p {
-    opacity: 0.7;
-}
-
-.footer .footer-body .myemail {
-    font-family: 'Playfair Display', serif;
-    font-size: 44px;
-}
-
-.footer .footer-bottom p {
-    opacity: 0.7;
-}
-
-.go-to-top .icon {
-    background-color: #D98471;
-    fill: #ffffff;
-}
-
-.footer a {
-    color: #ffffff;
-}
-
-.menu-item a {
-    color: #3C5951;
-}
-
-.myname {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    color: #D98471;
-}
-
-.header-forms .lines-1 {
-    stroke: #d98471;
-}
-
-.header-forms .circle-1 {
-    fill: #f2ada7;
-}
-
-.header-forms .square-1 {
-    fill: #d98471;
-}
-
-.header-forms .triangle-1 {
-    fill: #3c5951;
-}
-
-.topbar .myemail {
-    color: #3C5951;
-}
-
-.topbar .myemail:after {
-    background-color: #F2ADA7;
+	font-family: 'Roboto Slab', serif;
+	color: #3C5951;
 }
 
 .is-color-primary {
-    color: #3C5951;
+	color: #3C5951;
 }
 
 .is-color-secondary {
-    color: #D98471;
+	color: #D98471;
 }
 
 .is-bg-secondary {
-    background-color: #D98471;
+	background-color: #D98471;
 }
 
 .is-font-primary {
@@ -106,4 +25,106 @@ body {
 
 .is-font-secondary {
 	font-family: 'Playfair Display', serif;
+}
+
+.headline {
+	font-size: 44px;
+	font-family: 'Playfair Display', serif;
+	color: #3C5951;
+}
+
+
+/* ============================================
+Topbar
+============================================ */
+
+.tobar .myname {
+	font-family: 'Playfair Display', serif;
+	font-size: 32px;
+	color: #D98471;
+}
+
+.topbar .myemail {
+	color: #3C5951;
+}
+
+.topbar .myemail:after {
+	background-color: #F2ADA7;
+}
+
+.topbar .menu-item a {
+	color: #3C5951;
+}
+
+/* ============================================
+Header
+============================================ */
+
+.header {
+	background-color: #F2E6D8;
+}
+
+.header-forms .lines-1 {
+	stroke: #d98471;
+}
+
+.header-forms .circle-1 {
+	fill: #f2ada7;
+}
+
+.header-forms .square-1 {
+	fill: #d98471;
+}
+
+.header-forms .triangle-1 {
+	fill: #3c5951;
+}
+
+/* ============================================
+Referenzen
+============================================ */
+
+.section-references {
+	background-color: #F8F3EE;
+}
+
+.references .item-content {
+	color: #fff;
+	background-color: #D98471;
+}
+
+.references .item-title {
+	font-family: 'Playfair Display', serif;
+	font-size: 32px;
+}
+
+/* ============================================
+Footer
+============================================ */
+
+.footer {
+	color: #ffffff;
+	background-color: #3C5951;
+}
+
+.footer .footer-body p {
+	opacity: 0.7;
+}
+
+.footer .footer-body .myemail {
+	font-family: 'Playfair Display', serif;
+	font-size: 44px;
+}
+
+.footer .footer-bottom p {
+	opacity: 0.7;
+}
+
+.go-to-top .icon {
+	background-color: #D98471;
+	fill: #ffffff;
+}
+
+.footer a {
+	color: #ffffff;
 }
