@@ -1,89 +1,210 @@
 .header {
-    height: 1000px;
-    display: flex;
+	height: 1000px;
+	display: flex;
     align-items: center;
+    position: relative;
 
-    .header-image {
-        display: block;
-        border-radius: 50%;
-        border: 8px solid $color-primary;
-        width: 488px;
-        height: 488px;
+    .container {
+        position: relative;
+        z-index: 50;
     }
 
-    .header-title {
-        line-height: 1.3;
-        margin-bottom: $gap-4;
+	.header-image {
+		display: block;
+		border-radius: 50%;
+		border: 8px solid $color-primary;
+		width: 488px;
+		height: 488px;
+	}
+
+	.header-title {
+		line-height: 1.3;
+		margin-bottom: $gap-4;
+	}
+
+	p:not(:last-child) {
+		margin-bottom: $gap-4;
+	}
+}
+
+.header-forms {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+
+    .form-item {
+        position: absolute;
     }
 
-    p:not(:last-child) {
-        margin-bottom: $gap-4;
+    .square-1 {
+        top: 50%;
+        margin-top: -50px;
+        left: -179px;
+    }
+
+    .circle-1 {
+        top: 134px;
+        right: -122px;
+    }
+
+    .triangle-1 {
+        bottom: -141px;
+        left: 50%;
+        margin-left: 267px;
+    }
+
+    .lines-1 {
+        top: 422px;
+        right: 0;
     }
 }
 
 .topbar {
-    position: absolute;
+	position: absolute;
     width: 100%;
+    z-index: 100;
 
-    .container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr)
+	.container {
+		display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+		height: 100px;
+    }
+    
+    .topbar-center {
+        justify-self: center;
+    }
+
+    .topbar-right {
+        justify-self: right;
     }
 }
 
-.section-references {
-}
+.section-references {}
 
 .references {
-    .reference-item {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: auto  176px;
+	.reference-item {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: auto 176px;
 
-        &:not(:last-child) {
-            margin-bottom: 96px;
-        }
+		&:not(:last-child) {
+			margin-bottom: 96px;
+		}
 
-        &:nth-child(even) {
-            .item-image {
-                grid-column: 2/13;
-                grid-row: 1/2;
-            }
-    
-            .item-content {
-                grid-column: 1/8;
-                grid-row: 1/3;
-            }
-        }
+		&:nth-child(even) {
+			.item-image {
+				grid-column: 2/13;
+				grid-row: 1/2;
+			}
 
-        .item-image {
-            grid-column: 1/12;
-            grid-row: 1/2;
-            width: 100%;
-            border-radius: 24px;
-        }
+			.item-content {
+				grid-column: 1/8;
+				grid-row: 1/3;
+			}
+		}
 
-        .item-content {
-            grid-column: 6/13;
-            grid-row: 1/3;
-            align-self: end;
-            padding: $gap-6;
-            border-radius: 24px;
-        }
-    }
+		.item-image {
+			grid-column: 1/12;
+			grid-row: 1/2;
+			width: 100%;
+			border-radius: 24px;
+		}
+
+		.item-content {
+			grid-column: 6/13;
+			grid-row: 1/3;
+			align-self: end;
+			padding: $gap-6;
+			border-radius: 24px;
+			font-size: 18px;
+
+			p {
+				opacity: 0.7;
+			}
+		}
+
+		.item-title {
+			margin-bottom: $gap-3;
+		}
+	}
 }
 
 .footer {
-    height: 640px;
-    text-align: center;
+	height: 640px;
+	text-align: center;
 
-    .container {
-        height: 100%;
-        display: grid;
-        grid-template-rows: auto 1fr auto;
+	.container {
+		height: 100%;
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+	}
+
+	.footer-body {
+		align-self: center;
+    }
+    
+    .footer-bottom {
+        padding-bottom: $gap-7;
     }
 
-    .footer-body {
-        align-self: center;
+    .myemail {
+        display: block;
+        text-decoration: none;
+        margin-top: $gap-4;
+    }
+}
+
+.go-to-top {
+    display: block;
+    text-decoration: none;
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -24px;
+        margin-bottom: $gap-2;
+    }
+}
+
+.menu {
+	display: flex;
+
+	.menu-item {
+		&:not(:last-child) {
+			margin-right: $gap-6;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.topbar .myemail {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: calc(100% + 6px);
+        height: 6px;
+        border-radius: 6px;
+        bottom: 1px;
+        left: -3px;
+        z-index: -1;
     }
 }
